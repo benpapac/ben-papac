@@ -23,10 +23,10 @@ const nextConfig = {
 	/* config options here */
 	assetPrefix: assetPrefix,
 	basePath: basePath,
-	images: {
-		loader: 'imgix',
-		path: 'benpapac-sources.imgix.net',
-	},
+	// images: {
+	// 	loader: 'imgix',
+	// 	path: 'benpapac-sources.imgix.net',
+	// },
 	output: 'export',
 };
 
