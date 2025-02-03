@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import Link from 'next/link';
 
@@ -17,7 +17,7 @@ import Link from 'next/link';
 		window.scroll(0,0);
 	}, [])
 
-	const sendEmail = (e: React.SyntheticEvent) => {
+	const sendEmail = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
         console.log('user', user_id)
 
@@ -36,8 +36,8 @@ import Link from 'next/link';
 					setSent('fail')
 				}
 			);
-
-			e.target.reset();
+			
+			(document.getElementById("contact-form") as HTMLFormElement).reset();
 	};
 
     if (sent === 'pass') {
@@ -60,7 +60,7 @@ import Link from 'next/link';
 				<p className={"txt-lg"}>{"To inquire about a project, or just say hello, just fill out the contact form."}</p>
 			</div>
 		<div className={"w-full md:w-1/3  h-3/4 mx-auto bg-slate-300 rounded-lg"} >
-			<form className={"p-8 md:w-3/4 flex flex-col"} ref={form} onSubmit={sendEmail}>
+			<form id={"contact-form"} className={"p-8 md:w-3/4 flex flex-col"} ref={form} onSubmit={sendEmail}>
 				<label className={" my-1 h-10 text-xl"}>Name</label>
 				<input type="hidden" name='to_name' value="Ben"/>
 				<input className={"md:w-3/4 rounded shadow appearance-none h-10 p-1"} type='text' placeholder='e.g. Nicole Seymour' name='name' />
