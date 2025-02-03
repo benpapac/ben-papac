@@ -27,6 +27,7 @@ const nextConfig = {
 		loader: 'imgix',
 		path: 'benpapac-sources.imgix.net',
 	},
+	output: 'export',
 };
 
 export default nextConfig;
