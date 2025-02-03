@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,8 +31,21 @@ export default function RootLayout({
     <html lang="en">
      
         <body
-          className={`${inter.variable} antialiased`}
+          className={`${inter.variable} antialiased bg-green-500 text-gray-700`}
           >
+            <header className={"sticky z-10 p-8 h-10 w-full space-x-10 flex flex-row"}>
+                    <Link href={"/"} className={"text-lg md:w-1/2 md:text-4xl"}>{"Ben Papac"}</Link>
+                    <div className={"flex flex-row space-x-10 place-content-end md:w-1/2"}>
+            
+                      <Link href={"/contact"}>{"Contact"}</Link>
+                      <Link href={'/benpapac_resume.pdf'} 
+                      target='_blank' 
+                      rel='noreferrer noopener'
+                      >
+                        {"Resume"}
+                    </Link>
+                        </div>
+                  </header>
           {children}
         </body>
     </html>

@@ -1,0 +1,22 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger on pushes to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build  site
+        run: npm run build
+      - name: Deploy to GitHub Pages
+        uses: benpapac/github-pages-deploy-action@v4
+        with:
+          branch: main # Your deployment branch
+          folder: build # The folder containing your built site
+          # Example of using a secret for API key during build:
+          env:
+            NEXT_PUBLIC_USER_ID: ${{ secrets.NEXT_PUBLIC_USER_ID }}
