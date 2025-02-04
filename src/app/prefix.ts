@@ -1,0 +1,1 @@
+export const prefix = 'https://ben-papac.s3.us-east-1.amazonaws.com';

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { prefix } from '../app/prefix';
 
 
 const raleway = Raleway({
@@ -32,7 +33,7 @@ export default function RootLayout({
             
                       <Link href={"/about"}>{"About"}</Link>
                       <Link href={"/contact"}>{"Contact"}</Link>
-                      <Link href={'/benpapac_resume.pdf'} 
+                      <Link href={`${prefix}/benpapac_resume.pdf`} 
                       target='_blank' 
                       rel='noreferrer noopener'
                       >

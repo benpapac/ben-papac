@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { KeyboardControls } from "@react-three/drei";
+import { prefix } from "./prefix";
 
 export default function Home() {
-  const basePath = process.env.NEXT_PUBLIC_basepath || '';
   
   return (
      <KeyboardControls
@@ -22,7 +22,7 @@ export default function Home() {
           <div className={"mx-auto my-2 md:w-1/3 md:h-1/3"}>
             <Image
             className={"rounded-lg"}
-            src={`/Ben Papac.jpg`}
+            src={`${prefix}/Ben Papac.jpg`}
             unoptimized
             alt="Ben's portrait"
             width={250}
@@ -47,7 +47,7 @@ export default function Home() {
           <div className={"mb-10 flex flex-row w-full flex-wrap place-items-center space-x-1"}>
             <Image
         className={"rounded-lg"}
-          src="/javascript.png"
+          src={`${prefix}/javascript.png`}
           alt="Ben's portrait"
           width={68}
           height={50}
@@ -55,7 +55,7 @@ export default function Home() {
           />
           <Image
         className={"rounded-lg"}
-          src="/typescript.png"
+          src={`${prefix}/typescript.png`}
           alt="Ben's portrait"
           width={68}
           height={50}
@@ -63,7 +63,7 @@ export default function Home() {
           />
           <Image
         className={"rounded-lg"}
-          src="/python.png"
+          src={`${prefix}/python.png`}
           alt="Ben's portrait"
           width={58}
           height={50}
@@ -71,7 +71,7 @@ export default function Home() {
           />
           <Image
         className={"rounded-lg"}
-          src="/react.png"
+          src={`${prefix}/react.png`}
           alt="Ben's portrait"
           width={58}
           height={50}
@@ -79,7 +79,7 @@ export default function Home() {
           />
           <Image
         className={"rounded-lg"}
-          src="/aws.png"
+          src={`${prefix}/aws.png`}
           alt="Ben's portrait"
           width={58}
           height={50}

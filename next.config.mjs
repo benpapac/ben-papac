@@ -28,6 +28,7 @@ const nextConfig = {
 	// 	path: 'benpapac-sources.imgix.net',
 	// },
 	output: 'export',
+	images: {unoptimized: true},
 };
 
 export default nextConfig;

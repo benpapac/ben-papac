@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import { prefix } from "../prefix";
 
 export default function About() {
     return (
@@ -11,7 +12,7 @@ export default function About() {
                     <div className={"flex flex-col w-full md:w-2/3 space-x-1"}>
                       <Image
                         className={"rounded-lg"}
-                        src="/JDLogo.png"
+                        src={`${prefix}/JDLogo.png`}
                         alt="JD Logo"
                         width={300}
                         height={300}
@@ -38,7 +39,7 @@ export default function About() {
                     <div className={"mb-4 flex flex-col w-full md:w-2/3 space-x-1"}>
                       <Image
                         className={"rounded-lg mb-10"}
-                        src="/Amotions.png"
+                        src={`${prefix}/Amotions.png`}
                         alt="Amotions Logo"
                         width={300}
                         height={300}
