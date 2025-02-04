@@ -28,7 +28,7 @@ export default function About() {
         
         
                     <ol className={"ml-4 list-disc md:w-3/4 space-y-1"}>
-                      <li>{"Created a preview of AutoPath using the in-app map, yielding 60% user engagement (measured using Adobe Analytics)"}</li>
+                      <li>{"Created a preview of AutoPath using the in-app map, yielding up to 25% user engagement, or users who used the older product, called Guidance Lines. (measured using Adobe Analytics)"}</li>
                       <li>{"Updated UX features supporting AutoPath Headlands to improve user experience, reducing click count by 8 to 10 clicks"}</li>
                       <li>{"Updated api contract for AutoPath Headlands feature, improving separation between two types of data, Boundaries and AutoPath"}</li>
                     </ol>
