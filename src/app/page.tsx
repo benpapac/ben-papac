@@ -4,6 +4,7 @@ import Image from "next/image";
 import { KeyboardControls } from "@react-three/drei";
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_basepath || '';
   
   return (
      <KeyboardControls
@@ -21,7 +22,8 @@ export default function Home() {
           <div className={"mx-auto my-2 md:w-1/3 md:h-1/3"}>
             <Image
             className={"rounded-lg"}
-            src="https://benpapac.github.io/ben-papac/assets/Ben Papac.jpg"
+            src={`/Ben Papac.jpg`}
+            unoptimized
             alt="Ben's portrait"
             width={250}
             height={250}
