@@ -21,7 +21,7 @@ export default function Home() {
           <div className={"mx-auto my-2 md:w-1/3 md:h-1/3"}>
             <Image
             className={"rounded-lg"}
-            src="/Ben Papac.jpg"
+            src="https://benpapac.github.io/ben-papac/assets/Ben Papac.jpg"
             alt="Ben's portrait"
             width={250}
             height={250}
