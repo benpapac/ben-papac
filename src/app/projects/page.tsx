@@ -21,7 +21,7 @@ const Projects = () => {
                 />
                 </a>
           
-                <p className={"w-1/2 p-4"}>{"A sleek single-page React App, with a server application and AWS S3 asset storage for a  boutique talent management company.  "}
+                <p className={"md:w-1/2 p-4"}>{"A sleek single-page React App, with a server application and AWS S3 asset storage for a  boutique talent management company.  "}
                     <span className={"underline"}>
                         <a 
                         href={"https://www.lgmanagement.org/talent"}
@@ -50,7 +50,7 @@ const Projects = () => {
                 className={"hover:scale-105 transition-all rounded-lg"}
                 />
                 </a>
-                <p className={"p-4 w-1/2"}>{"Pure html, css and javascript. This project features a simulation of the popular board game Onitama.  "}
+                <p className={"p-4 md:w-1/2"}>{"Pure html, css and javascript. This project features a simulation of the popular board game Onitama.  "}
 
                     <span className={"underline"}>
                         <a 
