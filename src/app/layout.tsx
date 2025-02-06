@@ -32,6 +32,7 @@ export default function RootLayout({
                     <div className={"flex flex-row space-x-10 place-content-end md:w-1/2"}>
             
                       <Link href={"/about"}>{"About"}</Link>
+                      <Link href={"/projects"}>{"Projects"}</Link>
                       <Link href={"/contact"}>{"Contact"}</Link>
                       <Link href={`${prefix}/benpapac_resume.pdf`} 
                       target='_blank' 
