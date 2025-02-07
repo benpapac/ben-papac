@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
-import "./globals.css";
-import Link from "next/link";
-import { prefix } from '../app/prefix';
-import Nav from "./Nav";
 
+import "./globals.css";
+
+import dynamic from 'next/dynamic'
+ 
+const Nav = dynamic(
+  () => import('./components/Nav'),
+  { ssr: false }
+)
 
 const raleway = Raleway({
   variable: "--font-raleway",

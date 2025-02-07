@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { prefix } from "./prefix";
+import { prefix } from "../prefix";
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,10 +14,10 @@ const Nav = () => {
 
     if (window.innerWidth < 500) {
         return (
-            <>
+             <div>
             <div className={"mt-4 flex flex-row space-x-28"}>
                 <Link href={"/"} className={"mt-1 ml-4 text-2xl w-1/2 text-start"}>{"Ben Papac"}</Link>
-                <button onClick={handleClick} 
+                 <button onClick={handleClick} 
     className={"z-10 flex flex-col justify-center items-start w-10 h-10  "}>
                     <span className={`bg-slate-500 block transition-all duration-300 ease-out 
                                     h-1 w-6 rounded-sm ${isOpen ? 
@@ -50,7 +50,7 @@ const Nav = () => {
                         </Link>
                     </div>
                
-                </>
+                </div>
         )
     }
 
