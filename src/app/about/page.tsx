@@ -6,7 +6,7 @@ export default function About() {
     return (
         <div className={"mt-10 flex flex-col"}>
             <div className={"my-10 mx-auto md:w-3/4 flex flex-col text-xl"}>
-                  <h2 className={"mb-2 text-3xl font-bold text-center"}>{"Learn More About What I've built."}</h2>
+                  <h2 className={"mb-2 text-3xl font-bold"}>{"What I've built."}</h2>
         
                   <div className={"mb-4 flex flex-col md:flex-row w-full place-items-center"}>
                     <div className={"flex flex-col w-full md:w-2/3 space-x-1"}>
@@ -23,7 +23,7 @@ export default function About() {
                         <p className={"font-semibold"}>{"Mar 2023 - Nov 2024"}</p>
                       </div>
                     </div>
-                    <p className={"place-items-start mb-4 w-full"}>{"Primarily working on John Deere's Land Manager application, I built several features in support of their new AutoPath (Boundaries) product, which paves the way for autonomous farming. See below a few highlights."}</p>
+                    <p className={"place-items-start mb-4 w-full"}>{"Primarily in John Deere's Land Manager application, I built several features in support of AutoPath (Boundaries), which paves the way for autonomous farming. See below for a few highlights."}</p>
                   </div>
         
         
@@ -50,7 +50,7 @@ export default function About() {
                         <p className={"font-semibold"}>{"Jan 2023 - Mar 2023"}</p>
                       </div>
                     </div>
-                    <p className={"mb-4 w-full"}>{"At Amotions, I built out a self-evaluation survey to help users identify key strengths and weaknesses I also refactored code, and developed and implemented new technical training for interns."}</p>
+                    <p className={"mb-4 w-full"}>{"At Amotions, I built out a self-evaluation survey to help users identify key strengths and weaknesses. I also refactored code, and developed and implemented new technical training for interns."}</p>
                   </div>
         
         

@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
      
         <body
-          className={`${raleway.variable} antialiased bg-green-500 text-gray-700`}
+          className={`${raleway.variable} antialiased bg-green-100 text-gray-700`}
           >
             <Nav/>
             {children}
