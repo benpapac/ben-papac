@@ -14,6 +14,24 @@
   }
 }
 
+.jd {
+  background: url(../../public/JDCombine.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.amotions {
+  background: url(../../public/VideoConference.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lg {
+  background: url(https://ben-papac.s3.us-east-1.amazonaws.com/LG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { prefix } from "../prefix";
+import { cabin, catamaran } from "../fonts";
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -56,10 +57,10 @@ const Nav = () => {
 
     return (
         <header className={"sticky z-10 p-8 h-10 w-full space-x-10 flex flex-row"}>
-            <Link href={"/"} className={"text-lg md:w-1/2 md:text-4xl"}>{"Ben Papac"}</Link>
+            <Link href={"/"} className={`${catamaran.variable} text-lg md:w-1/2 md:text-4xl`}>{"Ben Papac"}</Link>
                 <div className={"flex flex-row space-x-10 place-content-end md:w-1/2"}>
             
-                      <Link href={"/about"}>{"About"}</Link>
+                      <Link href={"/work-history"}>{"Work History"}</Link>
                       <Link href={"/projects"}>{"Projects"}</Link>
                       <Link href={"/contact"}>{"Contact"}</Link>
                       <Link href={`${prefix}/benpapac_resume.pdf`} 

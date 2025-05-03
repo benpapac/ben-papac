@@ -1,21 +1,20 @@
+"use client"
+
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
 
 import "./globals.css";
 
 import dynamic from 'next/dynamic'
+import { raleway } from "./fonts";
  
 const Nav = dynamic(
   () => import('./components/Nav'),
   { ssr: false }
 )
 
-const raleway = Raleway({
-  variable: "--font-raleway",
-  subsets: ["latin"],
-});
 
-export const metadata: Metadata = {
+
+const metadata: Metadata = {
   title: "Ben's Portfolio Page",
   description: "A Next.js Single Page Application highlighting a Ben Papac's web development work",
 };
@@ -30,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
      
         <body
-          className={`${raleway.variable} antialiased bg-green-100 text-gray-700`}
+          className={`${raleway.variable} antialiased bg-gray-200 text-gray-700`}
           >
             <Nav/>
             {children}
