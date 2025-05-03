@@ -5,11 +5,13 @@ import List from "@/app/typeography/list";
 import Title from "@/app/typeography/title";
 import { lg } from "../wh-constants";
 import { prefix } from "@/app/prefix";
+import Details from "@/app/components/details";
 
 
 export default function LG () {
     return (
-        <div className={"mt-[150px] mx-auto flex flex-col place-items-center"}>
+        <Details>
+            <div className={"w-[300px] h-[150px] bg-gray-800 rounded-xl flex flex-col place-items-bottom"}>
              <Image
                 className={""}
                 src={`${prefix}/${lg.image}`}
@@ -17,7 +19,8 @@ export default function LG () {
                 width={300}
                 height={300}
                 priority
-            />
+                />
+                </div>
             <Highlights card={lg}/>
 
              <Title>{"Overview"}</Title>
@@ -40,6 +43,6 @@ export default function LG () {
                 <li>{"Proven weekly engagement, measured in email submissions via the Contact page."}</li>
             </List>
               
-        </div>
+        </Details>
     )
 };

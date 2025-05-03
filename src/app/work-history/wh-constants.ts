@@ -31,7 +31,7 @@ export const lg = {
     bg: "lg",
     copy: "As the sole developer for this boutique talent company, I built this React app with smooth UX features and basic admin login.",
     href: "work-history/lg",
-    image: "LG",
+    image: "LG.png",
     title: "Sleek UI for a boutique Talent Company",
     top: "top-[20%]",
     role: "Software Engineer",

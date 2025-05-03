@@ -5,10 +5,11 @@ import { prefix } from "@/app/prefix";
 import Image from "next/image";
 import List from "@/app/typeography/list";
 import Copy from "@/app/typeography/copy";
+import Details from "@/app/components/details";
 
 export default function Deere (){
     return (
-        <div className={"mt-[150px] mx-auto w-full max-w-7xl flex flex-col place-items-center"}>
+        <Details>
             <Image
                 className={""}
                 src={`${prefix}/${jd.image}`}
@@ -38,6 +39,6 @@ export default function Deere (){
                 <li>{"20% Increase in DAUs of Autopath(Boundaries)"}</li>
                 <li>{"Improved user experience, by reducing user input time by 50%"}</li>
            </List>
-        </div>
+        </Details>
     );
 };

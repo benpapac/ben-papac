@@ -5,11 +5,12 @@ import Highlights from "../components/highlights";
 import Image from "next/image";
 import List from "@/app/typeography/list";
 import Title from "@/app/typeography/title";
+import Copy from "@/app/typeography/copy";
 
 export default function Amotions () {
 
     return (
-        <div className={"mt-[150px] mx-auto flex flex-col place-items-center"}>
+        <div className={"mx-auto flex flex-col place-items-center"}>
              <Image
                 className={""}
                 src={`${prefix}/${amotions.image}`}
@@ -21,10 +22,10 @@ export default function Amotions () {
             <Highlights card={amotions}/>
 
              <Title>{"Overview"}</Title>
-            <p className={"text-lg max-w-xl my-3"}>{"Amotions, Inc. is a startup focused on combining the power of AI with emotional intelligence. They focus on products such as HR upskilling, live sales video call assistance, and empathy-based coaching."}</p>
+            <Copy>{"Amotions, Inc. is a startup focused on combining the power of AI with emotional intelligence. They focus on products such as HR upskilling, live sales video call assistance, and empathy-based coaching."}</Copy>
 
             <Title>{"Goal"}</Title>
-            <p className={"text-lg max-w-xl"}>{"I worked at Amotions in its infancy. At the time, the organization was building out prototypes for its different products, and soliciting early adopters."}</p>
+            <Copy>{"I worked at Amotions in its infancy. At the time, the organization was building out prototypes for its different products, and soliciting early adopters."}</Copy>
 
             <Title>{"What I did"}</Title>
             <List>
