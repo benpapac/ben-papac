@@ -6,6 +6,7 @@ import Title from "@/app/typeography/title";
 import { lg } from "../wh-constants";
 import { prefix } from "@/app/prefix";
 import Details from "@/app/components/details";
+import Copy from "@/app/typeography/copy";
 
 
 export default function LG () {
@@ -24,11 +25,18 @@ export default function LG () {
             <Highlights card={lg}/>
 
              <Title>{"Overview"}</Title>
-            <p className={"text-lg max-w-xl my-3"}>{"LG Management is a boutique Talent Management company that represents top-of-show talent in the TV, Film, and Theater industries. They needed a simple, clean web app to act as their digital calling card."}</p>
+            <Copy>{"LG Management is a boutique Talent Management company that represents top-of-show talent in the TV, Film, and Theater industries. They needed a simple, clean web app to act as their digital calling card."}</Copy>
 
             <Title>{"Goal"}</Title>
-            <p className={"text-lg max-w-xl"}>{"To protect the company's brand and online presence, I createed a sleek single-page React app that included a useful admin feature as well."}</p>
-
+            <Copy>{"To protect the company's brand and online presence, I created a sleek single-page React app that included a useful admin feature as well."}</Copy>
+            <Image
+                className={"my-10 rounded-2xl"}
+                src={`${prefix}/${lg.bg.toUpperCase()}`}
+                alt={lg.alt}
+                width={1000}
+                height={1000}
+                priority
+            />
             <Title>{"What I did"}</Title>
             <List>
                 <li>{"Developed a noSQL api on MongoDB"}</li>

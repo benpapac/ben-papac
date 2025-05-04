@@ -3,13 +3,14 @@
 export const jd = {
     alt: "JD Logo",
     bg: "jd",
-    copy: "Working within John Deere's Land Manager application, I built several features in support of AutoPath (Boundaries), which paved the way for autonomous farming. See below for a few highlights.",
+    copy: "In John Deere's Land Manager application, I built several features in support of AutoPath (Boundaries), which paved the way for autonomous farming.",
     href: "work-history/deere",
     image: "JDLogo.png",
     title: "Autonomy Capable Precision Ag Product",
     top: "",
     role: "Software Engineer I",
-    skills: "Typescript, REST API, React & Redux"
+    skills: "Typescript, REST API, React & Redux",
+    video: "AutoPath and Headlands.mp4"
 
 };
 

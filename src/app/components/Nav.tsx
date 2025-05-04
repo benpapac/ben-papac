@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { prefix } from "../prefix";
-import { cabin, catamaran } from "../fonts";
+import { catamaran } from "../fonts";
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -38,10 +38,9 @@ const Nav = () => {
                 </button>
             </div>
                 
-                    <div className={`z-1 fixed top-0 left-0 flex flex-col bg-red-200 justify-center items-center w-full h-full text-center text-3xl space-y-4 transition-all ease-in-out duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-96'}`}>                            
+                    <div className={`z-1 fixed top-0 left-0 flex flex-col bg-gray-800 justify-center items-center w-full h-full text-center text-3xl space-y-4 transition-all ease-in-out  text-gray-100 duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-96'}`}>                            
                         <Link href={"/"}>{"Home"}</Link>
-                        <Link href={"/about"}>{"About"}</Link>
-                        <Link href={"/projects"}>{"Projects"}</Link>
+                        <Link href={"/work-history"}>{"My Work"}</Link>
                         <Link href={"/contact"}>{"Contact"}</Link>
                         <Link href={`${prefix}/benpapac_resume.pdf`} 
                                     target='_blank' 
@@ -57,11 +56,10 @@ const Nav = () => {
 
     return (
         <header className={"sticky z-10 p-8 h-10 w-full space-x-10 flex flex-row"}>
-            <Link href={"/"} className={`${catamaran.variable} text-lg md:w-1/2 md:text-4xl`}>{"Ben Papac"}</Link>
+            <Link href={"/"} className={`${catamaran.variable} text-lg md:w-1/2 md:text-4xl`}>{"Benjamin Papac"}</Link>
                 <div className={"flex flex-row space-x-10 place-content-end md:w-1/2"}>
             
-                      <Link href={"/work-history"}>{"Work History"}</Link>
-                      <Link href={"/projects"}>{"Projects"}</Link>
+                      <Link href={"/work-history"}>{"My Work"}</Link>
                       <Link href={"/contact"}>{"Contact"}</Link>
                       <Link href={`${prefix}/benpapac_resume.pdf`} 
                       target='_blank' 

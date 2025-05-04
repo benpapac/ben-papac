@@ -26,6 +26,17 @@ export default function Deere (){
            <Title>{"Goal"}</Title>
            <Copy>{"ISG's Autopath(Boundaries) product allows farmers to create autonomous work plans for their fields. Including Headlands in this work plan was proving cumbersome. Farmers had to make changes to a separate piece of data that represented the Headland, then check out their Autopath plan to see if it would work. I was tasked with updating our Autopath api and front end app to let users include the Headland within the Autopath itself. This would speed things up for farmers tremendously."}</Copy>
 
+           <video width="800" height="800" className={"my-10 border-solid border-gray-800 rounded-xl"} controls preload="none">
+      <source src={`${prefix}/${jd.video}`} type="video/mp4" />
+      <track
+        src="/path/to/captions.vtt"
+        kind="subtitles"
+        srcLang="en"
+        label="English"
+      />
+      Your browser does not support the video tag.
+    </video>
+
            <Title>{"What I did"}</Title>
            <List>
                 <li>{"Coordinated with our back end team, UX, and Product Owner."}</li>
