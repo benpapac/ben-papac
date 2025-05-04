@@ -9,14 +9,20 @@ const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
 
   
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
       setIsOpen(!isOpen);
   };
+
+  const close = (e) => {
+    e.preventDefault();
+    setIsOpen(false);
+  }
 
     if (window.innerWidth < 500) {
         return (
              <div>
-            <div className={"mt-4 flex flex-row space-x-28"}>
+            <div className={"mt-4 flex flex-row space-x-28 z-1"}>
                 <Link href={"/"} className={"mt-1 ml-4 text-2xl w-1/2 text-start"}>{"Benjamin Papac"}</Link>
                  <button onClick={handleClick} 
     className={"z-10 flex flex-col justify-center items-start w-10 h-10  "}>
@@ -39,9 +45,9 @@ const Nav = () => {
             </div>
                 
                     <div className={`z-1 fixed top-0 left-0 flex flex-col bg-gray-800 justify-center items-center w-full h-full text-center text-3xl space-y-4 transition-all ease-in-out  text-gray-100 duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-96'}`}>                            
-                        <Link href={"/"}>{"Home"}</Link>
-                        <Link href={"/work-history"}>{"My Work"}</Link>
-                        <Link href={"/contact"}>{"Contact"}</Link>
+                        <Link href={"/"} onClick={close}>{"Home"}</Link>
+                        <Link href={"/work-history"} onClick={close}>{"My Work"}</Link>
+                        <Link href={"/contact"} onClick={close}>{"Contact"}</Link>
                         <Link href={`${prefix}/benpapac_resume.pdf`} 
                                     target='_blank' 
                                     rel='noreferrer noopener'

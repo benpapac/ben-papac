@@ -1,3 +1,5 @@
+"use client"
+
 import Title from "@/app/typeography/title";
 import Highlights from "../components/highlights";
 import { jd } from "../wh-constants";
@@ -23,10 +25,22 @@ export default function Deere (){
            <Title>{"Overview"}</Title>
            <Copy>{"John Deere ISG is an industry leader in the Precision Ag space. To maintain their benchmark products, ISG began work on autonomous farming operations a few years ago. A foundational element of any farming operation is the Headland: the space around the perimeter of a field that has to be covered in a separate pass of the equipment. "}</Copy>
 
+           <Image
+                className={"my-3 rounded-xl place-self-center"}
+                src={`${prefix}/JDCombine.jpeg`}
+                alt={jd.alt}
+                width={window.innerWidth - (window.innerWidth / 10)}
+                height={window.innerWidth - (window.innerWidth / 10)}
+                priority
+            />
+
            <Title>{"Goal"}</Title>
            <Copy>{"ISG's Autopath(Boundaries) product allows farmers to create autonomous work plans for their fields. Including Headlands in this work plan was proving cumbersome. Farmers had to make changes to a separate piece of data that represented the Headland, then check out their Autopath plan to see if it would work. I was tasked with updating our Autopath api and front end app to let users include the Headland within the Autopath itself. This would speed things up for farmers tremendously."}</Copy>
 
-           <video width="800" height="800" className={"my-10 border-solid border-gray-800 rounded-xl"} controls preload="none">
+           <video 
+                   width={window.innerWidth - (window.innerWidth / 10)}
+                height={window.innerWidth - (window.innerWidth / 10)}
+           className={"my-10 border-solid border-gray-800 rounded-xl"} controls preload="none">
       <source src={`${prefix}/${jd.video}`} type="video/mp4" />
       <track
         src="/path/to/captions.vtt"
