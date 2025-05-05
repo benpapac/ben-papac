@@ -31,8 +31,8 @@ export default function RootLayout({
         <body
           className={`${raleway.variable} antialiased bg-gray-200 text-gray-700`}
           >
-            <Nav/>
             {children}
+            <Nav/>
            <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center min-h-10">
        
             </footer>

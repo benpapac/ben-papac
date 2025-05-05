@@ -24,7 +24,7 @@ export default function Card({alt, bg, idx, image, href, title, top, copy}) {
     return (
         <div className={"my-10 mx-auto relative w-full max-w-7xl flex flex-col"}>
                   <div className={`mb-4 flex flex-col md:flex-row h-[500px]`}>
-                  <div className={`w-full h-full absolute z-0 blur-sm ${bg}`}></div>
+                  <div className={`w-full h-full absolute -z-10 blur-sm ${bg}`}></div>
                   <Image
                         className={`absolute ${top} left-[10%] md:left-[35%] z-1`}
                         src={`${prefix}/${image}`}
@@ -38,7 +38,7 @@ export default function Card({alt, bg, idx, image, href, title, top, copy}) {
                      <div id={idx}
                      onMouseEnter={handleMouseOver} 
                      onMouseLeave={handleMouseLeave}
-                     className={`flex flex-col w-[90%] md:w-full p-1 md:p-5 rounded-2xl absolute bottom-0 left-[5%] md:left-0 z-1 h-auto gap-1 md:gap-3 ${isHovered} transition-all`}>
+                     className={`flex flex-col w-[90%] md:w-full p-1 md:p-5 rounded-2xl absolute bottom-0 left-[5%] md:left-0 -z-8 h-auto gap-1 md:gap-3 ${isHovered} transition-all`}>
                       <Title>{title}</Title>
                     <CardCopy>{copy}</CardCopy>
                     <span className={"underline"}>{"Curious? Learn more about this project."}</span>

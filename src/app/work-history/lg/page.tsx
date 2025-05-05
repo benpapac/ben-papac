@@ -12,7 +12,7 @@ import Copy from "@/app/typeography/copy";
 export default function LG () {
     return (
         <Details>
-            <div className={"w-[300px] h-[150px] bg-gray-800 rounded-xl flex flex-col place-items-bottom"}>
+            <div className={"mt-24 w-[300px] h-[150px] bg-gray-800 rounded-xl flex flex-col place-items-bottom"}>
              <Image
                 className={""}
                 src={`${prefix}/${lg.image}`}

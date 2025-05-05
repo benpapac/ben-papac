@@ -12,7 +12,7 @@ export default function Amotions () {
     return (
         <div className={"mx-auto flex flex-col place-items-center"}>
              <Image
-                className={""}
+                className={"mt-24"}
                 src={`${prefix}/${amotions.image}`}
                 alt={amotions.alt}
                 width={300}

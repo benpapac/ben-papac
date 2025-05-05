@@ -4,12 +4,19 @@ import Title from "@/app/typeography/title";
 import Highlights from "../components/highlights";
 import { jd } from "../wh-constants";
 import { prefix } from "@/app/prefix";
+import { size } from './window';
 import Image from "next/image";
 import List from "@/app/typeography/list";
 import Copy from "@/app/typeography/copy";
 import Details from "@/app/components/details";
+import { useEffect, useState } from "react";
 
 export default function Deere (){
+    const [size, setSize] = useState(1000);
+    useEffect(()=>{
+        setSize(window.innerWidth - window.innerWidth/10);
+    },[])
+    if (!size) return <Title>{"Loading..."}</Title>
     return (
         <Details>
             <Image
@@ -29,8 +36,8 @@ export default function Deere (){
                 className={"my-3 rounded-xl place-self-center"}
                 src={`${prefix}/JDCombine.jpeg`}
                 alt={jd.alt}
-                width={window.innerWidth - (window.innerWidth / 10)}
-                height={window.innerWidth - (window.innerWidth / 10)}
+                width={size}
+                height={size}
                 priority
             />
 
@@ -38,8 +45,8 @@ export default function Deere (){
            <Copy>{"ISG's Autopath(Boundaries) product allows farmers to create autonomous work plans for their fields. Including Headlands in this work plan was proving cumbersome. Farmers had to make changes to a separate piece of data that represented the Headland, then check out their Autopath plan to see if it would work. I was tasked with updating our Autopath api and front end app to let users include the Headland within the Autopath itself. This would speed things up for farmers tremendously."}</Copy>
 
            <video 
-                   width={window.innerWidth - (window.innerWidth / 10)}
-                height={window.innerWidth - (window.innerWidth / 10)}
+                   width={size}
+                height={size}
            className={"my-10 border-solid border-gray-800 rounded-xl"} controls preload="none">
       <source src={`${prefix}/${jd.video}`} type="video/mp4" />
       <track

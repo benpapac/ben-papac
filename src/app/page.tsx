@@ -21,7 +21,7 @@ export default function Home() {
 
     <div className="flex flex-col items-center justify-items-center w-screen min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 place-items-center w-full">
-        <div className={"flex flex-col place-items-start md:w-[70%]"}>
+        <div className={"mt-10 md:mt-0 flex flex-col place-items-start md:w-[70%]"}>
               <Image
             className={"rounded-full my-5 border-solid border-black border-1 drop-shadow-lg"}
             src={`${prefix}/Ben Papac Sq.jpg`}
