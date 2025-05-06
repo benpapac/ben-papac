@@ -1,5 +1,5 @@
 export default function Copy ({children}) {
-    return <p className={` text-md md:text-lg max-w-3xl w-[90%] md:w-full md:place-self-end text-justify`}>{...children}</p>
+    return <p className={` text-md md:text-lg max-w-3xl w-[90%] md:w-full text-justify`}>{...children}</p>
 };
 
 export function CardCopy ({children}) {

@@ -9,7 +9,7 @@ export const jd = {
     title: "Autonomy Capable Precision Ag Product",
     top: "",
     role: "Software Engineer I",
-    skills: "Typescript, REST API, React & Redux",
+    skills: "Typescript, REST API, React & Redux, IoT",
     video: "AutoPath and Headlands.mp4"
 
 };
