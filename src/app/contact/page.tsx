@@ -54,7 +54,7 @@ import Link from 'next/link';
     }
 
 	return (
-		<div className={"mt-[20%] md:mt-[10%] mx-auto flex flex-col place-items-center"}>
+		<div className={"mt-[20%] md:mt-[10%] mx-auto max-w-3xl flex flex-col place-items-center"}>
 			<form id={"contact-form"} className={"p-1 w-[90%] md:w-3/4 flex flex-col"} ref={form} onSubmit={sendEmail}>
 				<label className={"my-1 h-10 text-xl"}>Name</label>
 				<input type="hidden" name='to_name' value="Ben"/>
