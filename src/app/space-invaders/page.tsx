@@ -1,12 +1,15 @@
 "use client"
 
 import { useState, useMemo, useRef } from "react";
-import { Canvas, useFrame, Vector3 } from "@react-three/fiber";
-import { KeyboardControls, KeyboardControlsEntry, useKeyboardControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { KeyboardControls, KeyboardControlsEntry } from "@react-three/drei";
 import Player from "./components/player";
-import Enemy from "./components/enemy";
 import Enemies from "./components/enemies";
 import { Mesh } from "three";
+
+import { extend } from "@react-three/fiber";
+import { FontLoader } from "three/examples/jsm/Addons.js";
+import { TextGeometry } from "three/examples/jsm/Addons.js";
 
 enum Controls {
   forward = 'forward',
