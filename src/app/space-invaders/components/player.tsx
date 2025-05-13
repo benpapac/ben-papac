@@ -1,7 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react";
-import { Mesh } from "three";
+import {  useState } from "react";
 import { useFrame, Vector3 } from "@react-three/fiber";
 import { useKeyboardControls } from "@react-three/drei";
 import { simpleCollision } from "../utils/simple-collision";
@@ -38,7 +37,7 @@ export default function Player({collision, player, enemies, setCollision}) {
       const {forward, back, left, right} = get();
       const x = player.current.position.x;
       const y = player.current.position.y;
-      const distance = .035;
+      const distance = .039;
       
       player.current!.rotation.x = clock.getElapsedTime();
       player.current!.position.setY(forward ? y + distance : back ? y - distance : y);

@@ -6,10 +6,8 @@ import { KeyboardControls, KeyboardControlsEntry } from "@react-three/drei";
 import Player from "./components/player";
 import Enemies from "./components/enemies";
 import { Mesh } from "three";
+import { Text } from "@react-three/drei";
 
-import { extend } from "@react-three/fiber";
-import { FontLoader } from "three/examples/jsm/Addons.js";
-import { TextGeometry } from "three/examples/jsm/Addons.js";
 
 enum Controls {
   forward = 'forward',
@@ -27,11 +25,9 @@ export type EnemyType = {
 
 
 export default function SpaceInvaders () {
-    // const [position, setPosition] = useState<Vector3>([0,0,0]);
     const player = useRef<Mesh>(null);
     const [enemies, setEnemies] = useState<(EnemyType | null)[]>(Array(25).fill(null));
     const [collision, setCollision] = useState<boolean>(false);
-    //  const [enemies, setEnemies] = useState(Array(25).fill(false));
 
    
 
@@ -43,35 +39,32 @@ export default function SpaceInvaders () {
         { name: Controls.jump, keys: ['Space'] },
     ], []);
 
-
-    // const forwardPressed = useKeyboardControls<Controls>(state => state.forward);
-
-
-    // if (forwardPressed) {
-    //     console.log('myMesh', myMesh.current);
-    //     myMesh.current?.position.setY(myMesh.current.position.y+1);
-    // }
-
-
     return (
         <KeyboardControls map={map}>
-            <div className={"w-screen max-w-[1100px] h-[500px] max-h-screen"}>
+            <div className={"w-screen max-w-[1100px] h-[90vh] max-h-screen"}>
                 <Canvas >
                     <Enemies collision={collision} enemies={enemies} setEnemies={setEnemies}/>
                     <directionalLight position={[0,0,2]}/>
                     <Player collision={collision} player={player} enemies={enemies} setCollision={setCollision}/>
-                    {/* <mesh position={position}>
-                        <boxGeometry />
-                        <meshStandardMaterial color={"orange"}/>
-                        </mesh> */}
-                </Canvas>
-                        <button onClick={(e) => {
-                            e.preventDefault();
+   
+                        <Text 
+                        // font={"../../../public/Rubik Moonrocks_Regular.json"}
+                        position={[-6, -3.6, 0]}
+                        fontSize={0.5}
+                        color="white"
+                        anchorX="left"
+                        anchorY="bottom"
+                        onClick={() => {
+                            // e.preventDefault();
                             player.current.position.setX(0);
                             player.current.position.setY(0);
                             setEnemies(Array(25).fill(null));
                             setCollision(false);
-                        }}>{"Start"}</button>
+                        }}>
+                            {"Start"}
+                            <meshNormalMaterial/>
+                            </Text>
+                </Canvas>
             </div>
         </KeyboardControls>
     )
